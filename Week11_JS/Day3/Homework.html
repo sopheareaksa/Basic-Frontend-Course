@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculate</title>
+    <link rel="stylesheet" href="Homework.css">
+</head>
+<body>
+    <h1>Salary Calculator</h1>
+    <div class="input-group">
+        <label>Name <input type="text" id="txtName"></label>
+        <label>Salary <input type="number" id="txtSalary"></label>
+        <label>WorkDay <input type="number" id="txtWorkDay"></label>
+        <label>WorkHour <input type="number" id="txtWorkHour"></label>
+        <label>Absent <input type="number" id="txtAbsent"></label>
+        <label>Overtime <input type="number" id="txtOT"></label>
+        <label>Late <input type="number" id="txtLate"></label>
+        <label>OthDeduction <input type="number" id="txtDeduction"></label>
+        <label>Bonus <input type="number" id="txtBonus"></label>
+    </div>
+    <button onclick="calculateSalary()">Calculate</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>OTSalary</th>
+                <th>Latework</th>
+                <th>TotalSalary</th>
+                <th>Tax</th>
+                <th>FinalSalary</th>
+            </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+    </table>
+
+    <script>
+        function calculateSalary() {
+            var name = document.getElementById("txtName").value;
+            var salary = parseFloat(document.getElementById("txtSalary").value) || 0;
+            var workDay = parseFloat(document.getElementById("txtWorkDay").value) || 0;
+            var workHour = parseFloat(document.getElementById("txtWorkHour").value) || 0;
+            var absent = parseFloat(document.getElementById("txtAbsent").value) || 0;
+            var ot = parseFloat(document.getElementById("txtOT").value) || 0;
+            var late = parseFloat(document.getElementById("txtLate").value) || 0;
+            var othdeduction = parseFloat(document.getElementById("txtDeduction").value) || 0;
+            var bonus = parseFloat(document.getElementById("txtBonus").value) || 0;
+
+            var Salary = (salary / workDay) * (workDay - absent);
+            var OTSalary = ((salary / workDay) / workHour) * (ot * 2);
+            var latework = ((salary / workDay) / workHour) * late;
+            var totalSalary = Salary + OTSalary + bonus - latework - othdeduction;
+
+            var tax = 0;
+            var riel = 4100;
+            var totalInRiel = totalSalary * riel;
+            if (totalInRiel < 1500000) {
+                tax = 0;
+            } else if (totalInRiel > 1500000 && totalInRiel <= 2200000) {
+                tax = totalSalary * 0.05;
+            } else if (totalInRiel > 2200000 && totalInRiel <= 3500000) {
+                tax = totalSalary * 0.1;
+            } else {
+                tax = totalSalary * 0.15;
+            }
+
+            var FinalSalary = totalSalary - tax;
+
+            var getresult = document.getElementById("result");
+            getresult.innerHTML = "<tr><td>" + name + "</td><td>" + Salary.toFixed(2) + "</td><td>" + OTSalary.toFixed(2) + "</td><td>" + latework.toFixed(2) + "</td><td>" + totalSalary.toFixed(2) + "</td><td>" + tax.toFixed(2) + "</td><td>" + FinalSalary.toFixed(2) + "</td></tr>";
+        }
+    </script>
+</body>
+</html>

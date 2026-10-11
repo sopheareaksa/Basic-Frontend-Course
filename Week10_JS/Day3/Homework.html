@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Enter Password">
+    <input type="checkbox" id="showPassword" onclick="togglePassword()">Show Password
+    
+</body>
+<script>
+    
+    var passwordInput = true;
+    function togglePassword(){
+        var password = document.getElementById("password");
+        if(passwordInput == true){
+            password.type = "text";
+            passwordInput = false;
+        } else {
+            password.type = "password";
+            passwordInput = true;
+        }
+    }
+    // function togglePassword(){
+    //     if(document.getElementById("showPassword").checked){
+    //         document.getElementById("password").type = "text";
+    //     } else {
+    //         document.getElementById("password").type = "password";
+    //     }
+    // }
+</script>
+</html>

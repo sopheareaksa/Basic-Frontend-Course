@@ -1,0 +1,59 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-contain{
+    width: 100%;
+    background-color: green;
+    height: 120px;
+    display: flex;
+    padding: 10px 0px 10px;
+}
+.logo{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    height: 100%;
+}
+.nav-bar{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.nav-bar ul{
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.bg{
+    opacity: 0.8;
+    color: orange;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 515px;
+    background-size: cover;
+    background-image: url(https://cms-assets.themuse.com/media/lead/01212022-1047259374-coding-classes_scanrail.jpg);
+}
+.footer{
+    height: 120px;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer img{
+    width: 50px;
+    height: 50px;
+}

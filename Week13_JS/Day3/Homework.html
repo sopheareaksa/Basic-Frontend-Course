@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="Homework.css" />
+</head>
+
+<body>
+    <style>
+        .form-add {
+            display: none;
+        }
+    </style>
+    <div class="nav-bar">
+        <h1>Dashboard</h1>
+        <input type="search" id="search" oninput="search()" placeholder="Search..." />
+    </div>
+    <button class="btn-add-product" id="add-product-modal">Add Product</button>
+    <div class="form-add">
+        <form id="add-item-form">
+            <label for="item-name">Name</label></th>
+            <input type="text" id="item-name" placeholder="Item Name" required />
+            <label for="item-quantity">Category</label></th>
+            <input type="text" id="item-quantity" placeholder="Category" required />
+            <label for="item-price">Price</label></th>
+            <input type="number" id="item-price" placeholder="Price" required />
+            <button type="submit">Add Item</button>
+        </form>
+    </div>
+    <div class="form update">
+        <form id="update-item-form">
+            <label for="item-name">Name</label></th>
+            <input type="text" id="item-name" placeholder="Item Name" required />
+            <label for="item-quantity">Category</label></th>
+            <input type="text" id="item-quantity" placeholder="Category" required />
+            <label for="item-price">Price</label></th>
+            <input type="number" id="item-price" placeholder="Price" required />
+            <button type="submit">Update Item</button>
+        </form>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody class="product">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const addProductBtn = document.getElementById('add-product-modal');
+        const addForm = document.querySelector('.form-add');
+
+        addProductBtn.onclick = function () {
+            addForm.style.display = 'block';
+        }
+
+
+        var products = [
+            {
+                "id": 1,
+                "name": "iphone",
+                "category": "Electronics",
+                "price": "$999"
+            },
+            {
+                "id": 2,
+                "name": "samsung",
+                "category": "Electronics",
+                "price": "$999"
+            },
+            {
+                "id": 3,
+                "name": "ipad",
+                "category": "Electronics",
+                "price": "$999"
+            }
+
+        ];
+        function loadproduct(listofproducts) {
+            var items = "";
+
+            for (var obj in listofproducts) {
+                items += `
+                    <tr>
+                        <td>${listofproducts[obj].name}</td>
+                        <td>${listofproducts[obj].category}</td>
+                        <td>${listofproducts[obj].price}</td>
+                        <td class="table-actions">
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                        `;
+            }
+
+            document.querySelector('.product').innerHTML = items;
+        }
+        loadproduct(products);
+
+        function search() {
+            const input = document.getElementById("search").value.toLowerCase();
+            const itemsearch = products.filter(product =>
+                product.name.toLowerCase().includes(input)
+            );
+            loadproduct(itemsearch);
+        }
+    </script>
+</body>
+
+</html>

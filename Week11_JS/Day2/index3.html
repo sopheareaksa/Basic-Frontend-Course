@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise3</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn-switch-toggle">
+
+        </div>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector('.btn-switch-toggle');
+
+    isClicked = true;
+    btn.onclick = function() {
+        if(isClicked) {
+            btn.style.transform = 'translateX(280px)';
+            document.querySelector('.container').style.backgroundColor = 'blue';
+            isClicked = false;
+        } else {
+            btn.style.transform = 'translateX(0)';
+            document.querySelector('.container').style.backgroundColor = 'lightblue';
+            isClicked = true;
+        }
+    }
+</script>
+</html>

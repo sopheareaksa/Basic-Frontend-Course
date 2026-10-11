@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="Homework.css">
+</head>
+<body>
+    <div class="form">
+        <h1 class="h1">Convert GB to MB</h1>
+        <div class="insert">
+            <label class="GB">
+                From: <input type="number" id="txtGB" value="0" onkeyup="Convert()"> gigabyte
+            </label>
+            <label class="MB">
+                To: <input type="number" id="txtMB" value="0" onkeyup="Convert()"> megabyte
+            </label>
+        </div>
+        <div class="btn">
+            <button>Convert</button>
+            <button onclick="Clear()">Clear</button>
+        </div>
+        <div class="result">
+            <h2 id="getresult">Result</h2>
+        </div>
+    </div>
+
+
+    <script>
+        function Convert(){
+            var txtGB = document.getElementById("txtGB");
+            var txtMB = document.getElementById("txtMB");
+            var getresult = document.getElementById("getresult");
+
+            txtMB.value = txtGB.value * 1024;
+            getresult.innerHTML = "Result: " + txtGB.value + " gigabyte" + " = " + txtMB.value + " megabyte.";
+
+        }
+        function Clear(){
+            var txtGB = document.getElementById("txtGB").value = "0";
+            var txtMB = document.getElementById("txtMB").value = "0";
+            var getresult = document.getElementById("getresult").innerHTML = "Result: ";
+        }
+    </script>
+</body>
+</html>

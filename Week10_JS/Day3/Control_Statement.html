@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statement</title>
+    <style>
+        .container{
+            width: 50%;
+            height: 200px;
+            padding: 20px;
+            background-color: red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+
+    </div>
+    <button onclick="HideShow()">Click Me</button>
+
+    <script>
+        // var a = 10;
+        // var b = 20;
+
+        // if(a > b){
+        //     console.log("a is greater than b");
+        // } else if(a < b){
+        //     console.log("a is less than b");
+        // } else {
+        //     console.log("a is equal to b");
+        // }
+        var HideShowBox = true;
+        function HideShow(){
+            var container = document.getElementById("container");
+            if(HideShowBox == true){
+                container.style.display = "none";
+                HideShowBox = false;
+            } else {
+                container.style.display = "block";
+                HideShowBox = true;
+            }
+            alert(HideShowBox);
+        }
+    </script>
+</body>
+</html>

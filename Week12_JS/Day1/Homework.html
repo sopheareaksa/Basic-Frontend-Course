@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        .container {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: wheat;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        var menu = ["Home", "About", "Services", "Contact"];
+        var item = "";
+        for (var i = 0; i < menu.length; i++) {
+            item += 
+            `
+            <li>${menu[i]}</li>
+            `
+            document.querySelector(".container").innerHTML = item;}
+    </script>
+</body>
+</html>

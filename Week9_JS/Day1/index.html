@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        img{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Hello ClubCoders</h1>
+    <button onclick="TestAlert()">Click Me</button>
+    <button onclick="show()">Show</button>
+    <div>
+        <img id="image" src="./img/bg.png" alt="" onclick="changeimg()">
+        <button onclick="changeimg()">ChangeImg</button>
+    </div>
+</body>
+<script>
+    function TestAlert(){
+        document.getElementById("text").innerText = "Welcome to ClubCoders";
+        document.getElementById("text").style.display = "none";
+        document.getElementById("text").style.backgroundColor = "yellow";
+    }
+    function show(){
+        document.getElementById("text").style.display = "block";
+    }
+    function changeimg(){
+        document.getElementById("image").setAttribute("src", "./img/bg2.png");
+        // document.getElementById("image").src = "./img/bg2.png";
+    }
+</script>
+</html>

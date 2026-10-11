@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="side-panel">
+         <div class="btnclose">X</div>
+    </div>
+    <button class="btn">Button</button>
+    
+</body>
+<script>
+    const btn = document.querySelector('.btn');
+    const sidePanel = document.querySelector('.side-panel');
+    const btnclose = document.querySelector('.btnclose');
+
+
+    btn.onclick = function() {
+        sidePanel.style.transform = 'translateX(0)';
+    }
+
+    btnclose.onclick = function() {
+        sidePanel.style.transform = 'translateX(100%)';
+    }
+</script>
+</html>

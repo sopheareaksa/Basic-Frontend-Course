@@ -1,0 +1,185 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f3eefc 0%, #ece5ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+/* Card Grid */
+.card-container {
+  width: min(1400px, 100%);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(58, 46, 106, 0.12);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(58, 46, 106, 0.18);
+}
+
+/* Top Image Section with Gradient */
+.image-section {
+  position: relative;
+  background: linear-gradient(135deg, #5a4d8c 0%, #907fdd 100%);
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.product-image {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.28));
+}
+
+/* Favorite Heart Button */
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.favorite-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Content Area */
+.content-section {
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.3;
+  min-height: 2.6em;
+}
+
+/* Tags/Badges */
+.tag-container {
+  display: flex;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #6e6e7a;
+  border: 1px solid #d9d5ea;
+  background: #f7f5ff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+/* Description Typography */
+.product-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #5f5f6f;
+  min-height: 3.6em;
+}
+
+/* Footer & Actions */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #9a9aa8;
+  letter-spacing: 0.6px;
+}
+
+.price-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111111;
+  margin-top: 2px;
+}
+
+/* CTA Button */
+.add-to-cart-btn {
+  background: linear-gradient(90deg, #5f5391 0%, #7d6ec8 100%);
+  color: #ffffff;
+  border: none;
+  padding: 11px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+  .card-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}

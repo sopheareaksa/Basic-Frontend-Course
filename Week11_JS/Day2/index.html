@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise PopUp Modals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <div class="btnclose">X</div>
+        </div>
+    </div>
+    <button class="btn">Button</button>
+</body>
+<script>
+    const btn = document.querySelector('.btn');
+    const container = document.querySelector('.container');
+    const btnclose = document.querySelector('.btnclose');
+
+    btn.onclick = function() {
+        container.style.display = 'block';
+    }
+    btnclose.onclick = function() {
+        container.style.display = 'none';
+    }
+
+</script>
+</html>

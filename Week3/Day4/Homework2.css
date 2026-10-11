@@ -1,0 +1,20 @@
+.container{
+    width: 800px;
+    overflow: hidden;
+    background-color: lightblue;
+    padding: 20px;
+    margin: 0 auto;
+}
+.greenbox{
+    width: 100%;
+    height: 550px;
+    background-color: green;
+    padding: 150px;
+    box-sizing: border-box;
+}
+.bluebox{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    
+}

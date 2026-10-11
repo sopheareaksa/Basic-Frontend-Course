@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 800px;
+    overflow: hidden;
+    background-color: yellow;
+    padding: 20px;
+    margin: 0 auto;
+}
+.lightbluebox{
+    width: 100%;
+    height: 250px;
+    background-color: lightblue;
+    padding: 10px;
+}
+.redbox{
+    width: 23%;
+    height: 100%;
+    background-color: red;
+    float: left;
+    
+}
+.redbox1{
+    width: 23%;
+    height: 100%;
+    background-color: red;
+    float: left;
+    margin-left: 2%;
+}
+.redbox2{
+    width: 23%;
+    height: 100%;
+    background-color: red;
+    float: left;
+    margin-left: 2%;
+}
+.redbox3{
+    width: 25%;
+    height: 100%;
+    background-color: red;
+    float: left;
+    margin-left: 2%;
+}
+.bluebox{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    margin-top: 15px;
+}
+.graybox{
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+    margin-top: 15px;
+    padding: 15px;
+     box-sizing: border-box;
+}
+.box1{
+    width: 68%;
+    height: 100%;
+    float: left;
+}
+.b1{
+    width: 100%;
+    height: 48%;
+    background-color: lawngreen;
+    margin-bottom: 1%;
+}
+.b2{
+    width: 100%;
+    height: 48%;
+    background-color: blueviolet;
+    margin-top: 2%;
+  
+}
+.box2{
+    width: 29%;
+    height: 100%;
+    background-color: lightgray;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 20px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.container{
+        width: 100%;
+        height: 100vh;
+    }
+    .lightbluebox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        height: 400px;
+
+    }
+    .redbox{
+        width: 100%;
+    }
+    .redbox1{
+        width: 98%;
+    }
+    .redbox2{
+        width: 100%;
+        margin-left: -1px;
+    }
+    .redbox3{
+        width: 98%;
+    }
+    .bluebox{
+        width: 100%;
+        height: 150px;
+    }
+    .graybox{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 500px;
+    }
+    .box1{
+        width: 100%;
+        height: 300px;
+        gap: 15px;
+    }
+    .box2{
+        width: 100%;
+        height: 150px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 575.98px) {
+    .container{
+        width: 100%;
+        height: 970px;
+        margin: 0;
+    }
+    .lightbluebox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 460px;
+    }
+    .redbox{
+        width: 100%;
+        height: 100px;
+    }
+    .redbox1{
+        width: 100%;
+        margin-left: -1px;
+        height: 100px;
+    }
+    .redbox2{
+        width: 100%;
+        margin-left: -1px;
+        height: 100px;
+    }
+    .redbox3{
+        width: 100%;
+        margin-left: -1px;
+        height: 100px;
+    }
+    .graybox{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 340px;
+    }
+    .box1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 295px;
+        gap: 4px;
+    }
+    .box2{
+        width: 100%;
+        height: 130px;
+        margin-left: 0;
+    }
+}

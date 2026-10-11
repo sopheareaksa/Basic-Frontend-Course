@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loop</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        var num = [1, 2, 3, 4, 5];
+        var subject = ["Math", "Science", "English", "History", "Art"];
+        // for (var i = 0; i < num.length; i++) {
+        //     console.log(num[i]);
+        // }
+        // for (var i = 0; i < subject.length; i++) {
+        //     console.log(subject[i]);
+        // }
+        var item = "";
+        for (var i = 0; i < subject.length; i++) {
+            item += "<p>" + subject[i] + "</p>";
+            document.querySelector(".container").innerHTML = item;
+        }
+    </script>
+</body>
+</html>

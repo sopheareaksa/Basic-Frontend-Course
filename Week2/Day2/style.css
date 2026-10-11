@@ -1,0 +1,22 @@
+h1{
+   color:aqua ; 
+   border: 2px solid green;
+   width: 150px;
+   background-color: bisque;
+}
+p{
+    font-weight: bold;
+    color: aquamarine;
+    font-size: large;
+}
+.box1{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+}
+

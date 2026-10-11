@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week4-Day2</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            margin: 0 auto;
+            animation: TestingAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+            animation-direction: alternate;
+        }
+        @keyframes TestingAnimation{
+            0%{
+                background-color: blue;
+                transform: translate(0px , 0px);
+            }
+            25%{
+                background-color: palevioletred;
+                transform: translate(500px , 0px);
+            }
+            50%{
+                background-color: purple;
+                transform: translate(500px , 300px);
+            }
+            75%{
+                background-color: aqua;
+                transform: translate(0px , 300px);
+            }
+            100%{
+                background-color: orangered;
+                transform: translate(0px , 0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
